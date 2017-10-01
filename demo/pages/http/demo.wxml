@@ -1,0 +1,2 @@
+<!--pages/apirequest/demo.wxml-->
+<text>{{demoData}}</text>

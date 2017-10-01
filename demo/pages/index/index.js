@@ -1,54 +1,80 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    list: [
+      {
+        name: '启动页',
+        path: '/pages/startpage/start'
+      },
+      {
+        name: '轮播图',
+        path: '/pages/banner/banner'
+      }, {
+        name: '列表',
+        path: '/pages/cell/cell'
+      }, {
+        name: 'toast提示',
+        path: '/pages/toast/toast'
+      },
+      {
+        name: 'Http请求',
+        path: '/pages/http/demo'
+      },
+       {
+        name: 'Button 按钮',
+        path: '/example/btn/index'
+      }, {
+        name: 'Card 卡片',
+        path: '/example/card/index'
+      }, {
+        name: 'Cell 单元格',
+        path: '/example/cell/index'
+      }, {
+        name: 'Dialog 弹出框',
+        path: '/example/dialog/index'
+      }, {
+        name: 'Form 表单',
+        path: '/example/form/index'
+      }, {
+        name: 'Helper 基础样式',
+        path: '/example/helper/index'
+      }, {
+        name: 'Icon 图标',
+        path: '/example/icon/index'
+      }, {
+        name: 'Label 标签',
+        path: '/example/label/index'
+      }, {
+        name: 'Loadmore 加载',
+        path: '/example/loadmore/index'
+      }, {
+        name: 'Panel 面板',
+        path: '/example/panel/index'
+      }, {
+        name: 'Quantity 计数器',
+        path: '/example/quantity/index'
+      }, {
+        name: 'Steps 步骤条',
+        path: '/example/steps/index'
+      }, {
+        name: 'Switch 开关',
+        path: '/example/switch/index'
+      }, {
+        name: 'Tab 标签',
+        path: '/example/tab/index'
+      }, {
+        name: 'Toast 轻提示',
+        path: '/example/toast/index'
+      }, {
+        name: 'Toptips 通告栏',
+        path: '/example/toptips/index'
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    ]
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+
+  onLoad: function () {
+
+  },
+
+  onShow: function () {
+  },
 })

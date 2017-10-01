@@ -1,0 +1,2 @@
+/* pages/template/demo.wxss */
+.ku-card{ margin: 10px; }

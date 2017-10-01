@@ -1,12 +1,21 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/banner/banner",
+    "pages/startpage/start",
+    "pages/cell/cell",
+    "pages/toast/toast",
+    "pages/http/demo",
+    "pages/template/demo",
+    "pages/moredata/demo",
+    "pages/moredata/scroll"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "navigationBarBackgroundColor": "#35495e",
+    "navigationBarTitleText": "企业建站demo-飞鱼建站",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
   }
 }

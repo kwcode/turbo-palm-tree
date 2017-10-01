@@ -1,0 +1,65 @@
+.ku-container {
+  background: #efeff4;
+  overflow: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.ku-card {
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.ku-panel{background-color: #fff;}
+.ku-panel-title{ font-size: 14px;
+  line-height: 1;
+  color: #999;
+  padding:10px;
+}
+
+
+.ku-view-cell {
+  position: relative;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  font-size: 14px;
+}
+.ku-table-view{}
+.ku-view-cell:after {
+  position: absolute;
+  left: 15px;
+  right: 0;
+  bottom: 0;
+  border-top: 1rpx solid #e5e5e5;
+  background: #e5e5e5;
+  content: ' ';
+}
+
+.ku-nav-name {
+  flex: 1;
+}
+
+.ku-nav-right {
+  position: relative;
+  text-align: right;
+  color: #666;
+}
+
+.ku-nav-right:after {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8c8;
+  border-style: solid;
+  transform: translateY(-50%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}

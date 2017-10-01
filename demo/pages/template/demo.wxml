@@ -1,0 +1,79 @@
+<view class="ku-container">
+  <view class="ku-card">
+    <view class='ku-panel-title'>模板一(使用ES6的展开运算符...)</view>
+    <!--模板1-->
+    <template name="dataitem">
+      <view>{{keyid}}</view>
+    </template>
+    <view class="ku-view-cell">
+      <template is="dataitem" data="{{...dataitem}}"></template>
+    </view>
+  </view>
+  <view class="ku-card">
+    <view class='ku-panel-title'>模板二（循环）</view>
+    <!--模板二-->
+    <template name="dataitem2">
+      <view>数据-{{item}}</view>
+    </template>
+
+    <view class='ku-table-view' wx:for="{{[5,6]}}">
+      <view class="ku-view-cell">
+        {{index+1}}、
+        <template is="dataitem2" data="{{item}}"></template>
+      </view>
+    </view>
+  </view>
+  <view class="ku-card">
+    <view class='ku-panel-title'>模板三(通过表达式来确定使用哪个模板)</view>
+
+    <!--模板三-1-->
+    <template name="tp1">
+      <view>模板三-1】-{{item}}</view>
+    </template>
+    <!--模板三-2-->
+    <template name="tp2">
+      <view>模板三-2】-{{item}}</view>
+    </template>
+
+    <view class='ku-table-view' wx:for="{{[5,6]}}">
+      <view class="ku-view-cell">
+        <template is="{{item>5?'tp1':'tp2'}}" data="{{item}}"></template>
+      </view>
+    </view>
+  </view>
+
+  <view class="ku-card">
+    <view class='ku-panel-title'>模板四（传递多个参数到模板里面）</view>
+    <!--模板四-->
+    <template name="tpl4">
+      传递进来的：{{demoName}}
+      <view wx:for="{{movies}}">
+        <view>数据-{{item.name}}</view>
+      </view>
+    </template>
+
+    <view class='ku-table-view'>
+      <template is="tpl4" data="{{movies,demoName}}"></template>
+    </view>
+  </view>
+
+  <view class="ku-card">
+    <view class='ku-panel-title'>模板五（模板嵌套模板）</view>
+    <!--模板五-->
+    <template name="tpl5">
+      模板五传递进来的：{{demoName}}
+      <template is="{{item.id==1?'tpl52':'tpl51'}}" data="{{item}}" wx:for="{{movies}}" /> 
+    </template>
+    <template name="tpl51">
+      <view>tpl51-{{item.name}}</view>
+    </template>
+    <template name="tpl52">
+      <view>tpl52-{{item.name}}</view>
+    </template>
+
+    <view class='ku-table-view'>
+      <template is="tpl5" data="{{movies,demoName}}"></template>
+    </view>
+  </view>
+
+</view>

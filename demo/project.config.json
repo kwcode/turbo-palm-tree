@@ -9,11 +9,18 @@
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
 	"appid": "touristappid",
-	"projectname": "demo",
+	"projectname": "wxdemo%20by%20tkw",
 	"condition": {
 		"weapp": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "自定义",
+					"pathName": "pages/moredata/scroll",
+					"query": ""
+				}
+			]
 		},
 		"search": {
 			"current": -1,

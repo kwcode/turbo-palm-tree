@@ -1,0 +1,16 @@
+<!--例子 文档https://mp.weixin.qq.com/debug/wxadoc/dev/component/swiper.html-->
+<view class="ku-container">
+  <view class='ku-card'>
+    <view class='ku-panel-title'>
+      官方例子-轮播图
+    </view>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  
+</view>
