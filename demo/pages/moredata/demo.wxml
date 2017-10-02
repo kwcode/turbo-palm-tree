@@ -1,0 +1,36 @@
+<!--pages/cell/cell.wxml-->
+<view class="page-header">
+  <text class="page-header-text">加载更多数据</text>
+</view>
+
+<scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
+  <view wx:for="{{movies}}">
+    <navigator url="../moredata/demo?id={{item.id}}">
+      <view class="item">
+        <image class="poster" src="{{item.photo}}"></image>
+        <view class="meta">
+          <text class="title">{{item.name}}</text>
+          <text class="sub-title">{{item.summary}}({{item.createts}})</text>
+          <view class="artists">
+            <text>导演：{{item.username}}</text> 
+          </view>
+        </view>
+        <view class="rating">
+        <text>{{item.star}}</text>
+      </view>
+      </view>
+    </navigator>
+  </view>
+  <!--加载更多提示框-->
+  <view class="tips">
+    <view wx:if="{{hasMore}}">
+      <image src="/images/loading.gif" mode="aspectFill" />
+      <text>玩了命的加载中...</text>
+    </view>
+    <view wx:else>
+      <text>没有更多内容了</text>
+    </view>
+  </view>
+</scroll-view>
+<!-- 弹窗loading层-->
+<loading hidden="{{!isShowWaiting}}">正在加载...</loading>

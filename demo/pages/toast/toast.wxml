@@ -1,17 +1,18 @@
-<template name="zan-toast">
-  <view class="zan-toast" wx:if="{{ zanToast.show }}" bindtap="clearZanToast">{{ zanToast.title }}</view>
-</template>
- 
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">Toast</view>
+    <view class="page__desc">弹出式提示，采用小程序原生的toast</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="default" bindtap="openToast">(成功提示success)</button>
+      <button class="weui-btn" type="default" bindtap="openLoading">加载中提示(loading)</button>
 
-<view class="container">
+      <button class="weui-btn" type="default" bindtap="showLoading">显示 loading 提示框</button>
+      <button class="weui-btn" type="default" bindtap="showModal">显示模态弹窗</button>
+      <button class="weui-btn" type="default" bindtap="showActionSheet">显示操作菜单</button>
 
-  <view class="doc-title">TOAST</view>
-
-  <view class="zan-btns" style="margin-top: 30vh;">
-    <button class="zan-btn" bindtap="showToast">
-      显示toast
-    </button>
+      <button class="weui-btn" type="default" bindtap="showlayer">自定义layer</button>
+    </view>
   </view>
 </view>
-
-<template is="zan-toast" data="{{ zanToast }}"></template>

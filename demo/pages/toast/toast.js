@@ -1,67 +1,61 @@
-// pages/apirequest/demo.js
-const API_URL = 'https://api.douban.com/v2/movie'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  openToast: function () {
+    wx.showToast({
+      title: '已完成',
+      icon: 'success',
+      duration: 3000
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  openLoading: function () {
+    wx.showToast({
+      title: '数据加载中',
+      icon: 'loading',
+      duration: 3000
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  /*显示 loading 提示框, 需主动调用 wx.hideLoading 才能关闭提示框*/
+  showLoading: function () {
+    wx.showLoading({
+      title: '获取数据中....',
+      mask:true
+      //duration: 3000
+    });
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  /*这是一个模态提示弹窗*/
+  showModal:function(){
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态提示弹窗',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  /*显示操作菜单*/
+  showActionSheet:function(){
+    wx.showActionSheet({
+      itemList: ['A', 'B', 'C'],
+      success: function (res) {
+        console.log(res.tapIndex)
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    })
   },
+  showlayer:function(){
+    const layer = require('../../js/layer.js');
+    layer.showWaiting('你好，世界！');
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    setTimeout(function () {
+      layer.hideWaiting()
+    }, 2000)
   }
-})
+});

@@ -9,7 +9,8 @@
     "pages/http/demo",
     "pages/template/demo",
     "pages/moredata/demo",
-    "pages/moredata/scroll"
+    "pages/moredata/scroll",
+    "pages/moredata/m"
   ],
   "window": {
     "navigationBarBackgroundColor": "#35495e",

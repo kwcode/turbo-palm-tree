@@ -1,4 +1,5 @@
  @import "/ku-ui/common.wxss";
+ @import '/style/weui/weui.wxss';
 .container {
   background: #efeff4;
   overflow: hidden;
