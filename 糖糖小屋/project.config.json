@@ -4,17 +4,14 @@
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
-		"minified": true
+		"minified": true,
+		"newFeature": true
 	},
-	"compileType": "weapp",
+	"compileType": "miniprogram",
 	"libVersion": "1.5.4",
-	"appid": "touristappid",
-	"projectname": "demo",
+	"appid": "wx815c24bde167d891",
+	"projectname": "%E7%B3%96%E7%B3%96%E5%B0%8F%E5%B1%8B",
 	"condition": {
-		"weapp": {
-			"current": -1,
-			"list": []
-		},
 		"search": {
 			"current": -1,
 			"list": []
@@ -22,6 +19,17 @@
 		"conversation": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "demo1",
+					"pathName": "pages/common/btn/demo1",
+					"query": ""
+				}
+			]
 		}
 	}
 }

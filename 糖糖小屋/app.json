@@ -1,12 +1,13 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/common/btn/demo1"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "糖糖小屋",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "糖糖小屋欢迎您",
+    "navigationBarTextStyle": "black"
   }
 }

@@ -1,4 +1,7 @@
 /**index.wxss**/
+.container{ background: #f8f9fb; }
+.logo{  }
+.logo  image {     }
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -17,5 +20,5 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+   
 }

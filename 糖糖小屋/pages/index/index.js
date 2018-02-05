@@ -15,6 +15,19 @@ Page({
       url: '../logs/logs'
     })
   },
+  btngourl:function(){
+    wx.navigateTo({
+      url: '/pages/common/btn/demo1',
+    })
+  },
+
+jumpLinks:function(){
+  wx.navigateTo({
+    url: 'http://www.jz60.com',
+})
+
+  }
+  ,
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
